@@ -15,7 +15,7 @@ bot(
     pattern: 'msgs ?(.*)',
     desc: 'shows groups message count',
     type: 'group',
-    onlyGroup: true,
+    onlyGroup: false,
   },
   async (message, match) => {
     const user = message.mention[0] || message.reply_message.jid
@@ -50,7 +50,7 @@ bot(
     pattern: 'reset ?(.*)',
     desc: 'reset groups message count',
     type: 'group',
-    onlyGroup: true,
+    onlyGroup: false,
   },
   async (message, match) => {
     const user = message.reply_message.jid || message.mention[0]
